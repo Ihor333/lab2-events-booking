@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-event
+spec:
+  selector:
+    app: service-event
+  type: NodePort
+  ports:
+    - name: http
+      port: 8081
+      nodePort: 30003
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-event
+spec:
+  selector:
+    matchLabels:
+      app: service-event
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: service-event
+    spec:
+      containers:
+        - name: server
+          image: 4321id1234/service-event
+          ports:
+            - name: http
+              containerPort: 8081
+
+---

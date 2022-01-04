@@ -1,0 +1,7 @@
+com\events\serviceevent\api\dto\OrderDto.class
+com\events\serviceevent\service\EventService.class
+com\events\serviceevent\api\dto\EventDto.class
+com\events\serviceevent\api\EventController.class
+com\events\serviceevent\repo\EventRepository.class
+com\events\serviceevent\ServiceEventApplication.class
+com\events\serviceevent\repo\model\Event.class
